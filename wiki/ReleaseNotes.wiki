@@ -1,5 +1,14 @@
 #summary Release notes for stable releases. It may or may not include changes for beta releases.
 
+= Stable release (2.4.0.0) =
+  * Add support for RWD-based themes
+  * Other small bug fixes and improvements 
+
+== Release comments ==
+*NOTE:* if you're using custom theme (not based on RWD theme), please, enable support for it. Go to _Admin interface_ -> _System_ -> _Configuration_ -> _ZetaPrints Web-to-print_ tab -> _Theme Compatibility_ section -> _Enable support for old custom themes_ setting and then select your theme in the list of themes.
+
+Code for the release can be obtained by _web-to-print-2.4.0.0_ tag from the project's SVN repo.
+
 = Stable release (2.3.0.1) =
   * Fix regression which made assigning web-to-print template to product in product editor broken
 
