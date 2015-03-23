@@ -23,8 +23,9 @@ Extension developed by http://www.zetaprints.com/</description>
    <license>mixed</license>
    <license_uri/>
    <version>2.4.0.0</version>
-   <stability>beta</stability>
-   <notes>* Add initial support for RWD-based themes</notes>
+   <stability>stable</stability>
+   <notes>* Add support for RWD-based themes
+* Other small bug fixes and improvements</notes>
    <authors>
       <name>
          <name>Anatoly A. Kazantsev</name>
