@@ -42,22 +42,17 @@ Extension developed by http://www.zetaprints.com/</description>
       <package>
          <name>
             <name/>
-            <name>Mage_Core_Modules</name>
          </name>
          <channel>
             <channel/>
-            <channel>community</channel>
          </channel>
          <min>
             <min/>
-            <min>1.6.0.0</min>
          </min>
          <max>
             <max/>
-            <max/>
          </max>
          <files>
-            <files/>
             <files/>
          </files>
       </package>
