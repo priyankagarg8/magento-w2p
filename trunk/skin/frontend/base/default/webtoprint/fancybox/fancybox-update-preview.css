@@ -68,3 +68,15 @@
 #fancybox-outer.zp-hide-shapes .zetaprints-field-shape.bottom {
   visibility: hidden !important;
 }
+
+/* Mobile view */
+
+@media (max-width: 991px) {
+
+  #zp-update-preview-button,
+  #zp-update-preview-button.no-middle {
+    right: 35px;
+    top: 5px;
+  }
+
+}

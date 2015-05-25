@@ -166,30 +166,34 @@
         </xsl:if>
 
         <div class="head">
-          <a class="image up-down" href="#"><span>
-            <xsl:call-template name="trans">
-              <xsl:with-param name="key">Up/Down</xsl:with-param>
-            </xsl:call-template>
-          </span></a>
-          <a class="image collapse-expand" href="#"><span>
-            <xsl:call-template name="trans">
-              <xsl:with-param name="key">Collapse/Expand</xsl:with-param>
-            </xsl:call-template>
-          </span></a>
-          <div class="icon"><span>
-            <xsl:call-template name="trans">
-              <xsl:with-param name="key">Title</xsl:with-param>
-            </xsl:call-template>:
-          </span></div>
-          <div class="title">
-            <label>
+          <div class="icon">
+            <span>
               <xsl:call-template name="trans">
-                <xsl:with-param name="key">
-                  <xsl:value-of select="@Name" />
-                </xsl:with-param>
-              </xsl:call-template>
-            </label>
+                <xsl:with-param name="key">Title</xsl:with-param>
+              </xsl:call-template>:
+            </span>
           </div>
+          <label class="title">
+            <xsl:call-template name="trans">
+              <xsl:with-param name="key">
+                <xsl:value-of select="@Name" />
+              </xsl:with-param>
+            </xsl:call-template>
+          </label>
+          <a class="image up-down" href="#">
+            <span>
+              <xsl:call-template name="trans">
+                <xsl:with-param name="key">Up/Down</xsl:with-param>
+              </xsl:call-template>
+            </span>
+          </a>
+          <a class="image collapse-expand" href="#">
+            <span>
+              <xsl:call-template name="trans">
+                <xsl:with-param name="key">Collapse/Expand</xsl:with-param>
+              </xsl:call-template>
+            </span>
+          </a>
         </div>
         <div id="page-{$page}-tabs-{position()}" class="selector-content">
           <ul class="tab-buttons">

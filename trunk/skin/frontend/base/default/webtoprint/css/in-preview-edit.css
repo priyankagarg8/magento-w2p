@@ -6,12 +6,12 @@ div.zetaprints-field-shape.bottom {
 }
 
 div.zetaprints-field-shape.top {
-  position: relative;
+  position: absolute;
   border: 1px dashed red;
   top: -1px;
   left: -1px;
-  width: 100%;
-  height: 100%;
+  right: -1px;
+  bottom: -1px;
 }
 
 div#zetaprints-preview-image-container div.zetaprints-field-shape.bottom {
@@ -26,7 +26,8 @@ div#zetaprints-preview-image-container:hover div.zetaprints-field-shape.bottom {
   visibility: hidden;
 }
 
-#fancybox-content:hover div.zetaprints-field-shape.bottom {
+#fancybox-content:hover div.zetaprints-field-shape.bottom,
+.touch #fancybox-content div.zetaprints-field-shape.bottom {
   visibility: visible;
 }
 
@@ -38,6 +39,8 @@ div.zetaprints-field-shape.highlighted {
 div.zetaprints-field-shape.highlighted div.zetaprints-field-shape.top {
   top: -2px;
   left: -2px;
+  right: -2px;
+  bottom: -2px;
   border-style: solid;
 }
 

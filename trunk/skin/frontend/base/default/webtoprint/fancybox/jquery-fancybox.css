@@ -153,7 +153,6 @@
 #fancybox-left-ico, #fancybox-right-ico {
   position: absolute;
   top: 50%;
-  left: -9999px;
   width: 30px;
   height: 30px;
   margin-top: -15px;
@@ -163,26 +162,19 @@
 }
 
 #fancybox-left-ico {
+  left: 20px;
   background-image: url('images/fancybox.png');
   background-position: -40px -30px;
 }
 
 #fancybox-right-ico {
+  right: 20px;
   background-image: url('images/fancybox.png');
   background-position: -40px -60px;
 }
 
 #fancybox-left:hover, #fancybox-right:hover {
   visibility: visible; /* IE6 */
-}
-
-#fancybox-left:hover span {
-  left: 20px;
-}
-
-#fancybox-right:hover span {
-  left: auto;
-  right: 20px;
 }
 
 .fancybox-bg {
@@ -320,6 +312,73 @@
 #fancybox-title-float-right {
   padding: 0 0 0 15px;
   background: url('images/fancybox.png') -55px -90px no-repeat;
+}
+
+/* Mobile view */
+
+@media (max-width: 991px) {
+
+  #fancybox-wrap {
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0;
+    overflow: hidden;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #fancybox-content {
+    position: absolute;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    margin: 0 -50% 0 0;
+    border-width: 5px !important;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  #fancybox-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .fancybox-bg {
+    display: none;
+  }
+
+  #fancybox-close {
+    top: 5px;
+    right: 5px;
+  }
+
+}
+
+/* Desktop view */
+
+@media (min-width: 992px) {
+  /* Move right arrow area to the right */
+  a#fancybox-right {
+    right: -40px;
+  }
+
+  /* Move left arrow area to the left */
+  a#fancybox-left {
+    left: -40px;
+  }
 }
 
 /* IE6 */

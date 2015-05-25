@@ -73,7 +73,7 @@ a.zetaprints-template-preview img {
 .zetaprints-text-field-wrapper {
   border: 1px solid #B6B6B6;
   background-color: white;
-  padding: 1px 4px;
+  padding: 0 8px;
   zoom: 1;
   line-height: 1.5;
 }
@@ -206,78 +206,87 @@ div.zetaprints-images-selector div.icon span, div.selector-content div.icon span
   display: none;
 }
 
-div.zetaprints-images-selector div.head {
+.zetaprints-images-selector .head {
+  position: relative;
+  min-height: 30px;
   border: 1px solid #b6b6b6;
-  margin: 0px;
-  text-align: left;
   cursor: pointer;
-  padding: 2px 9px;
+  padding: 0 8px;
 }
 
-div.zetaprints-images-selector div.head div.icon {
+.zetaprints-images-selector .head .icon {
+  display: block;
+  position: absolute;
+  top: 50%;
   height: 13px;
   width: 13px;
-  float: left;
-  background: transparent url('../images/images-selector-sprites.png') 0px -19px no-repeat;
-  margin: 2px 9px 0px 0px;
+  margin: -6px 0 0 0;
+  background: transparent url(../images/images-selector-sprites.png) 0px -19px no-repeat;
 }
 
-div.zetaprints-images-selector.no-value div.head div.icon {
+.zetaprints-images-selector.no-value .head .icon {
   background-position: 0px 0px;
 }
 
-div.zetaprints-images-selector div.head div.title label {
+.zetaprints-images-selector .head .title {
+  display: block;
+  margin: 0 45px 0 21px;
+  line-height: 30px;
   cursor: inherit;
 }
 
-div.zetaprints-images-selector div.head a.image {
-  float: right;
-  background: url('../images/images-selector-sprites.png') no-repeat;
-  margin-left: 6px;
-  margin-top: 4px;
+.zetaprints-images-selector .head .image {
+  position: absolute;
+  top: 50%;
   height: 9px;
+  margin: -4px 0 0 0;
+  background: url(../images/images-selector-sprites.png) no-repeat;
 }
 
-div.zetaprints-images-selector div.head a.image span {
+.zetaprints-images-selector .head .image span {
   display: none;
 }
 
-div.zetaprints-images-selector div.head a.image.up-down {
+.zetaprints-images-selector .head .image.up-down {
+  right: 8px;
   background-position: -76px 2px;
-  width: 15px;
+  width: 12px;
 }
 
-div.zetaprints-images-selector div.head a.image.up-down:hover {
+.zetaprints-images-selector .head .image.up-down:hover,
+.zetaprints-images-selector .head:hover .image.up-down {
   background-position: -76px -12px;
 }
 
-div.zetaprints-images-selector.minimized div.head a.image.up-down {
+.zetaprints-images-selector.minimized .head .image.up-down {
   background-position: -61px 2px;
 }
 
-div.zetaprints-images-selector.minimized div.head a.image.up-down:hover {
+.zetaprints-images-selector.minimized .head .image.up-down:hover,
+.zetaprints-images-selector.minimized .head:hover .image.up-down {
   background-position: -61px -12px;
 }
 
-div.zetaprints-images-selector div.head a.image.collapse-expand {
+.zetaprints-images-selector .head .image.collapse-expand {
+  right: 28px;
   background-position: -39px 0px;
   width: 17px;
 }
 
-div.zetaprints-images-selector div.head a.image.collapse-expand:hover {
+.zetaprints-images-selector .head .image.collapse-expand:hover {
   background-position: -39px -16px;
 }
 
-div.zetaprints-images-selector.expanded div.head a.image.collapse-expand {
+.zetaprints-images-selector.expanded .head .image.collapse-expand {
   background-position: -18px 0px;
 }
 
-div.zetaprints-images-selector.expanded div.head a.image.collapse-expand:hover {
+.zetaprints-images-selector.expanded .head .image.collapse-expand:hover {
   background-position: -18px -16px;
 }
 
 div.selector-content {
-  height: 135px;
+  height: 154px;
   background-color: #ffffff;
 }
 
@@ -295,10 +304,12 @@ div.selector-content input[type=radio] {
 }
 
 div.selector-content ul.tab-buttons div.icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  margin: -10px 0 0;
   width: 20px;
   height: 20px;
-  float: left;
-  margin-right: 2px;
 }
 
 div.selector-content ul.tab-buttons a {
@@ -306,6 +317,8 @@ div.selector-content ul.tab-buttons a {
   text-decoration: none;
   text-align: center;
   display: block;
+  line-height: 30px;
+  padding: 0 2px 0 28px;
 }
 
 div.selector-content ul.tab-buttons div.icon.upload {
@@ -337,13 +350,13 @@ div.selector-content ul.tab-buttons {
 }
 
 div.selector-content ul.tab-buttons li {
+  position: relative;
   border: 1px solid #b6b6b6;
   border-top: none;
-  padding: 3px 4px 3px 8px;
   background-color: #f8f9fa;
   line-height: 20px;
   font-size: 90%;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 div.selector-content ul.tab-buttons li.hidden {
@@ -361,10 +374,16 @@ div.selector-content ul.tab-buttons li.last {
   height: 100%;
   background-color: transparent;
   font-weight: normal;
+  min-height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding: 0px 4px 0px 0;
+  text-align: right;
 }
 
 div.selector-content ul.tab-buttons li.last label input {
   margin-right: 1px;
+  vertical-align: middle;
 }
 
 div.selector-content ul.tab-buttons li.last label.leave-blank-value {
@@ -373,7 +392,6 @@ div.selector-content ul.tab-buttons li.last label.leave-blank-value {
 
 div.selector-content div.tabs-wrapper {
   height: 100%;
-  padding: 0px 2px;
   border: 1px solid #b6b6b6;
   border-left: none;
   border-top: none;
@@ -381,7 +399,7 @@ div.selector-content div.tabs-wrapper {
 }
 
 div.selector-content div.tabs-wrapper div.tab {
-  padding-top: 2px;
+  padding-top: 6px;
   font-size: 90%;
 }
 
@@ -646,33 +664,6 @@ span.zetaprints-share-link.show input {
 
 .zp-user-data-changed #zp-warning-user-data-changed {
   display: block;
-}
-
-/* Fancybox tweaks */
-
-/* Move right arrow area to the right */
-a#fancybox-right {
-  right: -40px;
-}
-
-/* Move left arrow area to the left */
-a#fancybox-left {
-  left: -40px;
-}
-
-/*a#fancybox-right, a#fancybox-left {
-  visibility: visible; /* IE6 */
-/*}*/
-
-/* Make left arrow icon always visible */
-a#fancybox-left span {
-  left: 20px;
-}
-
-/* Make right arrow icon always visible */
-a#fancybox-right span {
-  left: auto;
-  right: 20px;
 }
 
 .thumb-shadow {
@@ -1210,4 +1201,55 @@ div.zetaprints-buttons-row div.row-part.first .zetaprints-button {
 /* Fake Add to cart button (default/zptheme specific) */
 #zetaprints-fake-add-to-cart-button {
   cursor: not-allowed;
+}
+
+/* Mobile view */
+
+/*
+
+Show only icons in tabs for image field to get more space for tab content
+TODO: show title of the tab in tab pane, show Default and No value options
+      under tab pane
+
+*/
+
+/*
+@media (max-width: 560px) {
+
+  div.selector-content ul.tab-buttons {
+    width: 35px;
+  }
+
+  div.selector-content ul.tab-buttons li {
+    height: 31px;
+  }
+
+  div.selector-content ul.tab-buttons a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .selector-content .tab-buttons span {
+    display: none;
+  }
+
+  div.selector-content div.tabs-wrapper {
+    margin-left: 35px;
+  }
+
+}
+*/
+
+@media (max-width: 770px) {
+
+  .zetaprints-images-selector .head .title {
+    margin: 0px 28px 0px 21px;
+  }
+
+  .zetaprints-images-selector .head .collapse-expand {
+    display: none;
+  }
+
 }
