@@ -43,3 +43,13 @@
 #fancybox-resize.middle-position .restore {
   background-position: -44px -271px;
 }
+
+/* Mobile view */
+
+@media (max-width: 991px) {
+
+  #fancybox-resize {
+    display: none !important;
+  }
+
+}

@@ -73,3 +73,15 @@
 .selected #zp-select-image-button .text .selected-image-text {
   display: block;
 }
+
+/* Mobile view */
+
+@media (max-width: 991px) {
+
+  #zp-select-image-button,
+  #zp-select-image-button.no-middle {
+    top: 5px;
+    right: 35px;
+  }
+
+}
